@@ -1,10 +1,4 @@
 /* eslint-disable */
-
-// include jsdom for DOM use in tests on travis
-const jsdom = require('jsdom');
-const { JSDOM } = jsdom;
-/* eslint-disable */
-
 // include jsdom for DOM use in tests on travis
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
