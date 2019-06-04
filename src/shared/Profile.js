@@ -7,7 +7,7 @@ class Profile extends Component {
         if(!user) {
             return '<div></div>';
         }
-        const avatar = user.photURL || './assets/default-avatar.png';
+        const avatar = user.photoURL || './assets/default-avatar.png';
         return /*html*/ `
             <div class="profile">
             <img src="${avatar}">

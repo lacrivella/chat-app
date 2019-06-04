@@ -45,3 +45,16 @@ test('renders default avatar when none', assert => {
     //assert
     assert.htmlEqual(rendered, expected);
 });
+
+test('renders empty div no returns', assert => {
+    //arrange
+    const user = null;
+    const profile = new Profile({ user });
+    const expected = /*html*/ `
+        <div></div>
+    `;
+    //act
+    const rendered = profile.renderTemplate();
+    //assert
+    assert.htmlEqual(rendered, expected);
+});
