@@ -24,3 +24,4 @@ test('renders with full user props', assert => {
     //assert
     assert.htmlEqual(rendered, expected);
 });
+
