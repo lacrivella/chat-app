@@ -25,3 +25,23 @@ test('renders with full user props', assert => {
     assert.htmlEqual(rendered, expected);
 });
 
+test('renders default avatar when none', assert => {
+    //arrange
+    const user = {
+        displayName: 'David Bowie',
+        photoURL: null
+    };
+
+    const profile = new Profile({ user });
+    const expected = /*html*/ `
+        <div class="profile">
+            <img src="./assets/default-avatar.png">
+            <span>David Bowie</span>
+            <button>Sign Out</button>
+        </div>
+    `;
+    //act
+    const rendered = profile.renderTemplate();
+    //assert
+    assert.htmlEqual(rendered, expected);
+});

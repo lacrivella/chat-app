@@ -4,9 +4,13 @@ import { auth } from '../services/firebase.js';
 class Profile extends Component {
     renderTemplate() {
         const user = this.props.user;
+        if(!user) {
+            return '<div></div>';
+        }
+        const avatar = user.photURL || './assets/default-avatar.png';
         return /*html*/ `
             <div class="profile">
-            <img src="https://www.darkcarnival.co.za/wp-content/uploads/2017/08/david-bowie-guardians-of-the-galaxy-vol-2.jpg">
+            <img src="${avatar}">
             <span>${user.displayName}</span>
             <button>Sign Out</button>
             </div>
