@@ -16,7 +16,7 @@ class App extends Component {
     
     renderTemplate() {
         return /*html*/ `
-            <div>
+            <div class="background">
                 <main>
                 <main>
             </div>

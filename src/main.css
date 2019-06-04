@@ -1,0 +1,23 @@
+/* div.background {
+    background:
+     linear-gradient(
+         rgba(35, 45, 58, .45),
+         rgba(35, 45, 58, .45),
+     ),
+    url("../../assets/background.jpg"); */
+/* } */
+
+@import url('https://fonts.googleapis.com/css?family=Cookie|Port+Lligat+Sans&display=swap');
+
+body {
+    background-color: #232D3A;
+    color: #C2C3B1;
+    font-family: 'Port Lligat Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Cookie', cursive;
+    font-size: 4em;
+}
