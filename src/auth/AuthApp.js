@@ -8,7 +8,7 @@ class AuthApp extends Component {
     render() {
         const dom = this.renderDOM();
 
-        const header = new Header({ title: 'Sign In to Chat!' });
+        const header = new Header({ title: 'Ahoy Matey!' });
         const main = dom.querySelector('main');
         dom.insertBefore(header.render(), main);
 

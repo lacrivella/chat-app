@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Cookie|Port+Lligat+Sans&display=swap');
 
 body {
-    background-color: #232D3A;
+    background: 
+    linear-gradient(
+        rgba(35, 45, 58, .9),
+        rgba(35, 45, 58, .9)),
+        url(../assets/background.jpg);
+        ;
+    background-size: 100%;
+
     /* background-size: 100%; */
 
     color: #EBEFE9;
@@ -12,5 +19,12 @@ body {
 
 h1 {
     font-family: 'Cookie', cursive;
-    font-size: 4em;
+    font-size: 5em;
+    
+}
+
+p {
+    text-align: center;
+    font-family: 'Port Lligat Sans', sans-serif;
+    font-size: 2em;
 }

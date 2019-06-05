@@ -1,5 +1,13 @@
 .profile {
-    display: flex;
-    align-items: right;
-    justify-content: space-between;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+.profile button {
+    margin-left: 5px;
+}
+
+.profile img {
+    border-radius: 100%
 }
