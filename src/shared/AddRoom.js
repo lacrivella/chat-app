@@ -4,22 +4,21 @@ import { auth, roomsRef } from '../services/firebase.js';
 class AddRoom extends Component {
     render() {
         const form = this.renderDOM();
-    
+        const input = form.querySelector('input');
+
         form.addEventListener('submit', event => {
-            const roomRef = roomsRef.push();
             event.preventDefault();
-            const formData = new FormData(form);
+            
+            const roomRef = roomsRef.push();
 
-            const room = {
-                id: roomRef.key,
-                owner: auth.currentUser.uid,
-                title: formData.get('chat-room')
-            };
-
-            roomRef.set(room).then(() => {
-                form.reset(); 
-            });
-
+            roomRef.set({
+                key: roomRef.key,
+                title: input.value,
+                owner: auth.currentUser.uid
+            })
+                .then(() => {
+                    form.reset();
+                });
         });
     
         return form;

@@ -2,16 +2,22 @@ import Component from '../Component.js';
 import RoomItem from '../shared/RoomItem.js';
 
 class RoomList extends Component {
+
     render() {
         const list = this.renderDOM();
+        const rooms = this.props.rooms;
 
-        const roomItem = new RoomItem();
-        list.appendChild(roomItem.render());
+        rooms.forEach(room => {
+            const roomItem = new RoomItem({ room });
+            list.appendChild(roomItem.render());
+        });
+
         return list;
     }
     renderTemplate() {
         return /*html*/ `
-        <div id="lists"></div>      
+        <ul id="lists">
+        </ul>      
     `;
     }
 }

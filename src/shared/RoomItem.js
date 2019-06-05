@@ -1,25 +1,27 @@
 import Component from '../Component.js';
+import { auth, roomsRef } from '../services/firebase.js';
 
 class RoomItem extends Component {
+    render() {
+        const dom = this.renderDOM();
+        const button = dom.querySelector('button');
+        const room = this.props.room;
+
+        button.addEventListener('click', () => {
+            roomsRef.child(room.key).remove();
+        });
+
+        return dom;
+    }
     renderTemplate() {
+        const room = this.props.room;
+        const isOwner = auth.currentUser.uid === room.owner;
+        const button = isOwner ? '<button>delete</button>' : '';
         return /*html*/ `
-        <ul>
-            <li>
-                <input type="checkbox" name"checkbox">
-                <label>STATIC CHATROOM I</label>
-                <button id="remove">remove</button>
-            </li>
-            <li>
-                <input type="checkbox" name"checkbox">
-                <label>STATIC CHATROOM II</label>
-                <button id="remove">remove</button>
-            </li>
-            <li>
-                <input type="checkbox" name"checkbox">
-                <label>STATIC CHATROOM III</label>
-                <button id="remove">remove</button>
-            </li>
-        </ul>
+        <li>
+            <a href="./chat.html?key=${room.key}">${room.title}</a>
+            ${button}
+        </li>
     `;
     }
 }
