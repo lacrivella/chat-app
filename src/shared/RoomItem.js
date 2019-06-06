@@ -15,8 +15,8 @@ class RoomItem extends Component {
     }
     renderTemplate() {
         const room = this.props.room;
-        const isOwner = auth.currentUser.uid === room.owner;
-        const button = isOwner ? '<button>delete</button>' : '';
+        const isOwner = auth.currentUser && auth.currentUser.uid === room.owner;
+        const button = isOwner ? '<button>&#10683;</button>' : '';
         return /*html*/ `
         <li>
             <a href="./chat.html?key=${room.key}">${room.title}</a>

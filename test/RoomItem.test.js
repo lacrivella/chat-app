@@ -14,7 +14,6 @@ test('renders template from room object', assert => {
     const expected = /*html*/`
         <li>
             <a href="./chat.html?key=LgdKlsNYZD8jA-h00Ps">chatroom 2</a>
-            <button>delete</button>
         </li>
     
     `;
