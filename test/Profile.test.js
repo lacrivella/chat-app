@@ -16,7 +16,7 @@ test('renders with full user props', assert => {
         <div class="profile">
             <img src="https://www.darkcarnival.co.za/wp-content/uploads/2017/08/david-bowie-guardians-of-the-galaxy-vol-2.jpg">
             <span>David Bowie</span>
-            <button>Sign Out</button>
+            <button>walk the plank</button>
         </div>
     `;
     //act
@@ -37,7 +37,7 @@ test('renders default avatar when none', assert => {
         <div class="profile">
             <img src="./assets/default-avatar.png">
             <span>David Bowie</span>
-            <button>Sign Out</button>
+            <button>walk the plank</button>
         </div>
     `;
     //act
