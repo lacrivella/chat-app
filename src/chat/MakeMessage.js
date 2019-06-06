@@ -1,12 +1,29 @@
 import Component from '../Component.js';
+import { auth } from '../services/firebase.js';
 
 class MakeMessage extends Component {
     render() {
         const form = this.renderDOM();
 
+        const roomRef = this.props.roomRef;
+
+        const messagesRef = roomRef.child('messages');
+
+        const input = form.querySelector('input');
+
         form.addEventListener('submit', event => {
             event.preventDefault();
-            console.log('test');
+
+            const messages = messagesRef.push();
+
+            messages.set({
+                owner: auth.currentUser.uid,
+                message: input.value
+            });
+
+            form.reset();
+            input.focus();
+            document.activeElement.blur(); 
         });
         return form;
     }
