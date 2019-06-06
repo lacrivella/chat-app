@@ -6,18 +6,17 @@
 
 .profile button {
     margin-left: 5px;
-    height: 25px;
+    height: 35px;
     width: auto;
     text-align: center;
     font-family: 'Cookie', cursive;
-    color: #232D3A;
-    background-color: #D9B878;
+    color: #EBEFE9;
+    background-color: transparent;
     display: flex;
     justify-items: end;
     margin: 10px;
     font-size: 1.5em;
-    border: none;
-    border-radius: 5%
+    border-color: #D9B878;
 }
 
 .profile img {
