@@ -1,0 +1,35 @@
+ul {
+    height: 300px;
+    width: 350px;
+    background-color: rgba(235, 239, 233, 0.842);
+    border-radius: 15%;
+}
+
+li {
+    list-style: none;
+    font-size: 1.4em;
+    padding: 3px;
+    text-align: center;
+}
+
+li button {
+    background: transparent;
+    border: none;
+    font-size: .8em;
+    color: #AC4334;
+    position: absolute;
+    right: 40%;
+}
+
+li a {
+    text-decoration: none;
+    color: #232D3A;
+}
+
+li a:visited {
+    color: #232D3A;
+}
+
+li a:hover {
+    color: #D9B878;
+}

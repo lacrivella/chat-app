@@ -27,8 +27,8 @@ class AddRoom extends Component {
     renderTemplate() {
         return /*html*/ `
         <form>
-            <label><input name="chat-room"></label>
-            <button>Add</button>
+            <label><input name="chat-room" placeholder="add a chat room"></label>
+            <button>&#9875;</button>
         </form>       
     `;
     }

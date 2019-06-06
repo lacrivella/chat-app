@@ -3,8 +3,8 @@
 body {
     background: 
     linear-gradient(
-        rgba(35, 45, 58, .9),
-        rgba(35, 45, 58, .9)),
+        rgba(35, 45, 58, .85),
+        rgba(35, 45, 58, .85)),
         url(../assets/background.jpg);
         ;
     background-size: 100%;
@@ -20,6 +20,7 @@ body {
 h1 {
     font-family: 'Cookie', cursive;
     font-size: 5em;
+    color: #D9B878;
     
 }
 

@@ -1,13 +1,30 @@
 .profile {
     position: absolute;
     top: 5%;
-    right: 5%;
+    left: 3%;
 }
 
 .profile button {
     margin-left: 5px;
+    height: 25px;
+    width: auto;
+    text-align: center;
+    font-family: 'Cookie', cursive;
+    color: #232D3A;
+    background-color: #D9B878;
+    display: flex;
+    justify-items: end;
+    margin: 10px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5%
 }
 
 .profile img {
-    border-radius: 100%
+    height: 50px;
+}
+
+.profile span {
+    font-family: 'Port Lligat Sans', sans-serif;
+    font-size: 1.4em;
 }
