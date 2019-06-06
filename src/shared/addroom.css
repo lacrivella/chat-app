@@ -1,0 +1,23 @@
+form {
+    text-align: center;
+}
+
+input {
+    text-align: center;
+    width: 200px;
+    height: 35px;
+    color: #232D3A;
+    font-family: 'Port Lligat Sans', sans-serif;
+    font-size: .9em;
+}
+
+form button {
+    height: 30px;
+    padding: 3px;
+    font-size: 1.4em;
+    border: none;
+    outline: none;
+    color: rgba(0, 0, 0 , .1);
+    background: transparent;
+    text-shadow: 1.2px .5px #D9B878;
+}
