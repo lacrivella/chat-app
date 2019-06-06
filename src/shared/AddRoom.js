@@ -8,9 +8,7 @@ class AddRoom extends Component {
 
         form.addEventListener('submit', event => {
             event.preventDefault();
-            
             const roomRef = roomsRef.push();
-
             roomRef.set({
                 key: roomRef.key,
                 title: input.value,
@@ -20,7 +18,6 @@ class AddRoom extends Component {
                     form.reset();
                 });
         });
-    
         return form;
     }
 
