@@ -2,12 +2,14 @@ import Component from '../Component.js';
 
 class MessageItem extends Component {
     renderTemplate() {
-        const  message = this.props.message;
+        const message = this.props.message;
         return /*html*/ `
-            <li class="message-item">
-            <span>${message.displayName}</span>
-            <span>${message.message}</span>
-            <img src="${message.photoURL}">
+            <li>
+                <div class="message-item">
+                    <img src="${message.photoURL}">
+                    <span id="displayname">${message.displayName}:</span>
+                    <span id="displaymessage">${message.message}</span>
+                </div>
             </li>
     `;
     }
