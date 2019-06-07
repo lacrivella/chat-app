@@ -22,7 +22,7 @@ class MakeMessage extends Component {
                 message: input.value,
                 displayName: auth.currentUser.displayName,
                 photoURL: avatar,
-                date: Date()
+                date: new Date(key.date)
             });
 
             form.reset();
