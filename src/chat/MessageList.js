@@ -4,9 +4,8 @@ import MessageItem from './MessageItem.js';
 class MessageList extends Component {
     render() {
         const dom = this.renderDOM();
-    
+
         const messages = this.props.messages;
-        console.log('hello', messages);
         if(!messages) {
             return dom;
         }
@@ -14,7 +13,11 @@ class MessageList extends Component {
             const messageItem = new MessageItem ({ message });
             dom.appendChild(messageItem.render());
         });
-    
+        
+        setTimeout(() => {
+            dom.scrollTop = dom.scrollHeight;
+        });
+        
         return dom;
     }
     renderTemplate() {
