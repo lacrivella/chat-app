@@ -8,10 +8,15 @@ class AddRoom extends Component {
 
         form.addEventListener('submit', event => {
             event.preventDefault();
+            const formData = new FormData(form);
+            const newRoom = {
+                roomName: formData.get('chat-room')
+            };
+
             const roomRef = roomsRef.push();
             roomRef.set({
                 key: roomRef.key,
-                title: input.value,
+                title: newRoom.roomName,
                 owner: auth.currentUser.uid
             })
                 .then(() => {

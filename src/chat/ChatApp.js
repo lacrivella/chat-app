@@ -29,7 +29,7 @@ class ChatApp extends Component {
         roomRef
             .on('value', snapshot => {
                 const value = snapshot.val();
-                header.update({ title: value.name });
+                header.update({ title: value.title });
             });
             
         const makeMessage = new MakeMessage({ 
