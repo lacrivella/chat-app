@@ -6,19 +6,23 @@ class MakeMessage extends Component {
         const form = this.renderDOM();
 
         const roomRef = this.props.roomRef;
-
         const messagesRef = roomRef.child('messages');
 
         const input = form.querySelector('input');
-
+        
         form.addEventListener('submit', event => {
             event.preventDefault();
-
+            
+            
+            const avatar = auth.currentUser.photoURL || './assets/default-avatar.png';
             const messages = messagesRef.push();
 
             messages.set({
-                owner: auth.currentUser.uid,
-                message: input.value
+                uid: auth.currentUser.uid,
+                message: input.value,
+                displayName: auth.currentUser.displayName,
+                photoURL: avatar,
+                date: Date()
             });
 
             form.reset();
