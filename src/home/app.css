@@ -1,0 +1,36 @@
+ul {
+    height: 300px;
+    width: 350px;
+    background-color: rgba(235, 239, 233, 0.75);
+    overflow: auto;
+    border: 1.5px dotted #D9B878;
+    border-image: url('/assets/default-avatar.png') 30;
+}
+
+li {
+    list-style: none;
+    font-size: 1.4em;
+    padding: 3px;
+    text-align: center;
+}
+
+li button {
+    background: transparent;
+    border: none;
+    font-size: .8em;
+    color: #AC4334;
+    position: absolute;
+}
+
+li a {
+    text-decoration: none;
+    color: #232D3A;
+}
+
+li a:visited {
+    color: #232D3A;
+}
+
+li a:hover {
+    color: #D9B878;
+}

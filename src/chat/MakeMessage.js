@@ -1,0 +1,45 @@
+import Component from '../Component.js';
+import { auth, messagesByRoomRef } from '../services/firebase.js';
+
+class MakeMessage extends Component {
+    render() {
+        const form = this.renderDOM();
+
+        const key = this.props.key;
+        const messagesRef = messagesByRoomRef.child(key);
+
+        const input = form.querySelector('input');
+        
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+            
+            
+            const avatar = auth.currentUser.photoURL || './assets/default-avatar.png';
+            const messages = messagesRef.push();
+
+            messages.set({
+                uid: auth.currentUser.uid,
+                message: input.value,
+                displayName: auth.currentUser.displayName,
+                photoURL: avatar,
+                date: new Date(key.date)
+            });
+
+            form.reset();
+            input.focus();
+            document.activeElement.blur(); 
+        });
+        return form;
+    }
+
+    renderTemplate() {
+        return /*html*/ `
+            <form id="make-message">
+                <label><input id="chatty" name="chat" placeholder="send a message in a bottle"></label>
+                <button id="send-chat">⎈</button>
+            </form>
+    `;
+    }
+}
+
+export default MakeMessage;

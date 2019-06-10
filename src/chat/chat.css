@@ -1,0 +1,51 @@
+div img {
+    height: 10px;
+    padding: none;
+}
+
+li {
+    color: #232D3A;
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main {
+    display: grid;
+    grid-column: 1 / 2 ;
+}
+
+#displayname {
+    font-weight: bold;
+}
+
+#displaymessage {
+    font-size: .7em;
+}
+
+ul.message-list {
+    width: 700px;
+    height: 400px;
+    padding-left: 0px;
+}
+
+ul {
+    grid-row: 1 / 5;
+    grid-column: 1 / 4 ;
+}
+
+button#send-chat {
+    border: none;
+    color: #D9B878;
+    background: transparent;
+    font-size: .8em;
+}
+
+input#chatty {
+    width: 350px;
+    height: 35px
+}
+

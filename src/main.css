@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Cookie|Port+Lligat+Sans&display=swap');
+
+body {
+    background: 
+    linear-gradient(
+        rgba(35, 45, 58, .85),
+        rgba(35, 45, 58, .85)),
+        url(../assets/background.jpg);
+        ;
+    background-size: 100%;
+
+    /* background-size: 100%; */
+
+    color: #EBEFE9;
+    font-family: 'Port Lligat Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Cookie', cursive;
+    font-size: 5em;
+    color: #D9B878;
+    
+}
+
+p {
+    text-align: center;
+    font-family: 'Port Lligat Sans', sans-serif;
+    font-size: 2em;
+}

@@ -1,0 +1,29 @@
+.profile {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+}
+
+.profile button {
+    margin-left: 5px;
+    height: 35px;
+    width: auto;
+    text-align: center;
+    font-family: 'Cookie', cursive;
+    color: #EBEFE9;
+    background-color: transparent;
+    display: flex;
+    justify-items: end;
+    margin: 10px;
+    font-size: 1.5em;
+    border-color: #D9B878;
+}
+
+.profile img {
+    height: 50px;
+}
+
+.profile span {
+    font-family: 'Port Lligat Sans', sans-serif;
+    font-size: 1.4em;
+}
