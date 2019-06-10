@@ -6,8 +6,7 @@ class MessageItem extends Component {
         return /*html*/ `
             <li>
                 <div class="message-item">
-                    <img src="${message.photoURL}">
-                    <span id="displayname">${message.displayName}:</span>
+                    <span id="displayname">${message.displayName}</span>
                     <span id="displaymessage">${message.message}</span>
                 </div>
             </li>

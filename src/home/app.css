@@ -1,9 +1,10 @@
 ul {
     height: 300px;
     width: 350px;
-    background-color: rgba(235, 239, 233, 0.842);
+    background-color: rgba(235, 239, 233, 0.75);
     overflow: auto;
-    border-radius: 15%;
+    border: 1.5px dotted #D9B878;
+    border-image: url('/assets/default-avatar.png') 30;
 }
 
 li {

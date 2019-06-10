@@ -35,8 +35,8 @@ class MakeMessage extends Component {
     renderTemplate() {
         return /*html*/ `
             <form id="make-message">
-                <label><input name="chat" placeholder="send a message"></label>
-                <button>X</button>
+                <label><input id="chatty" name="chat" placeholder="send a message in a bottle"></label>
+                <button id="send-chat">⎈</button>
             </form>
     `;
     }
