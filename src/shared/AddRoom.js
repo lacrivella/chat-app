@@ -4,7 +4,6 @@ import { auth, roomsRef } from '../services/firebase.js';
 class AddRoom extends Component {
     render() {
         const form = this.renderDOM();
-        const input = form.querySelector('input');
 
         form.addEventListener('submit', event => {
             event.preventDefault();
